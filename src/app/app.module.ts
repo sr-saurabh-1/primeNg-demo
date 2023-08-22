@@ -41,6 +41,7 @@ import { InputSwitchModule } from 'primeng/inputswitch';
 import { PasswordModule } from 'primeng/password';
 import { BlockUIModule } from 'primeng/blockui';
 import { DropdownModule } from 'primeng/dropdown';
+import { ChipsModule } from 'primeng/chips';
 
 
 
@@ -89,7 +90,8 @@ import { DropdownModule } from 'primeng/dropdown';
     InputSwitchModule,
     PasswordModule,
     BlockUIModule,
-    DropdownModule
+    DropdownModule,
+    ChipsModule
 
   ],
   providers: [MessageService],

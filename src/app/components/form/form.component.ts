@@ -29,6 +29,7 @@ export class FormComponent {
   securityQuestionList!:{name:string}[];
 
   isError:boolean=false;
+  food!:string;
 
 
   constructor() {}
@@ -75,8 +76,7 @@ export class FormComponent {
       dob:new FormControl<string>(''),
       securityQuestion:new FormControl<string>(''),
       securityAnswers:new FormControl<string>(''),
-
-
+      hobbies:new FormControl<string[]>([])
     })
   }
 

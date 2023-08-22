@@ -60,17 +60,10 @@
           <button type="button" class="ql-underline" aria-label="Underline"></button>
           <button type="button" class="ql-list" aria-label="List"></button>
           <button type="button" class="ql-header" aria-label="Header"></button>
-          <button type="button" class="ql-strike" aria-label="Strike"></button>
           <button type="button" class="ql-blockquote" aria-label="blockquote"></button>
 
           <span class="ql-formats">
             <select class="ql-align" [title]="'Aligment'">
-              <option selected></option>
-              <option value="center"></option>
-              <option value="right"></option>
-              <option value="justify"></option>
-            </select>
-            <select class="ql-align" [title]="'Aligment2'">
               <option selected></option>
               <option value="center"></option>
               <option value="right"></option>
@@ -167,98 +160,94 @@
   <p-checkbox name="group" [value]="category" [inputId]="category.key"></p-checkbox>
   <label [for]="category.key">{{ category.name }}</label>
 </div>
-<!-- [(ngModel)]="selectedCategories" -->
-
 
 
 <br>
 <br>
 <br>
 <br>
-<!--
-  <div *ngFor="let category of categories" class="field-checkbox">
-      <p-radioButton [inputId]="category.key" [value]="category"></p-radioButton>
-      <label [for]="category.key" class="ml-2">{{ category.name }}</label>
-  </div> -->
 
-  <!-- <div class="flex flex-wrap gap-3">
-    <div class="flex align-items-center">
-        <p-radioButton name="pizza" value="Cheese" inputId="ingredient1"></p-radioButton>
-        <label for="ingredient1" class="ml-2">Cheese</label>
-    </div>
+<div class="flex flex-wrap gap-3">
+  <div class="flex align-items-center">
+      <p-radioButton name="food" value="biryani" inputId="food1" [(ngModel)]="food"></p-radioButton>
+      <label for="ingredient1" class="ml-2">biryani</label>
+  </div>
 
-    <div class="flex align-items-center">
-        <p-radioButton name="pizza" value="Mushroom" inputId="ingredient2"></p-radioButton>
-        <label for="ingredient2" class="ml-2">Mushroom</label>
-    </div>
+  <div class="flex align-items-center">
+      <p-radioButton name="food" value="shawarma" inputId="food2" [(ngModel)]="food"></p-radioButton>
+      <label for="ingredient2" class="ml-2">shawarma</label>
+  </div>
 
-    <div class="flex align-items-center">
-        <p-radioButton name="pizza" value="Pepper" inputId="ingredient3"></p-radioButton>
-        <label for="ingredient3" class="ml-2">Pepper</label>
-    </div>
+  <div class="flex align-items-center">
+      <p-radioButton name="food" value="momos" inputId="food3" [(ngModel)]="food"></p-radioButton>
+      <label for="ingredient3" class="ml-2">momos</label>
+  </div>
 
-    <div class="flex align-items-center">
-        <p-radioButton name="pizza" value="Onion" inputId="ingredient4"></p-radioButton>
-        <label for="ingredient4" class="ml-2">Onion</label>
-    </div>
-  </div> -->
-  <!-- <p-radioButton name="food" value="biryani" inputId="biryani"></p-radioButton>
-  <label for="biryani"></label>
-  <p-radioButton name="food" value="shawarma" inputId="shawarma"></p-radioButton>
-  <label for="shawarma"></label>
-  <p-radioButton name="food" value="chat" inputId="chat"></p-radioButton>
-  <label for="chat"></label> -->
+  <div class="flex align-items-center">
+      <p-radioButton name="food" value="noodles" inputId="food4"  [(ngModel)]="food"></p-radioButton>
+      <label for="ingredient4" class="ml-2">noodles</label>
+  </div>
+</div>
+
+
+
 <div class="d-flex flex-column align-items-center justify-content-center">
 
-  <form [formGroup]="demoForm" class="d-flex flex-column align-items-center justify-content-center gap-2 border-2 demo-form ">
+  <form [formGroup]="demoForm" class="d-flex flex-column  justify-content-center  border-2 ps-4 demo-form ">
     <p class="text-center fs-2 fw-bold " >Demo Form</p>
-    <span class="p-float-label mb-3">
+    <span class="p-float-label mb-4">
       <input type="text"  pInputText id="fName" formControlName="fName"  [required]="true"/>
       <label htmlFor="fName">First name</label>
     </span>
-    <span class="p-float-label  mb-3">
+    <span class="p-float-label  mb-4">
       <input type="text"  pInputText  formControlName="lName" id="lName"  [required]="true"/>
       <label htmlFor="lName">Last name</label>
     </span>
 
-    <span class="p-float-label  mb-3">
+    <span class="p-float-label  mb-4">
       <input type="email"  pInputText  formControlName="email" id="email"  [required]="true"/>
       <label htmlFor="email">Email</label>
     </span>
 
-    <span class="p-float-label  mb-3">
+    <span class="p-float-label">
+      <p-chips separator="," formControlName="hobbies"  id="hobbies" placeholder="Hint: a, b, c" aria-describedby="hobbies-help" [required]="true"></p-chips>
+      <label htmlFor="hobbies">Hobbies</label>
+    </span>
+    <small class="mb-4" id="hobbies-help">Enter your hobbies seperated by(,) Ex: a,b,c</small>
+
+    <span class="p-float-label  mb-4">
       <p-inputMask mask="+99 9999999999"  formControlName="phone" id="phone" [required]="true"></p-inputMask>
       <label htmlFor="phone">Phone No</label>
     </span>
 
-
-    <span class="p-float-label  mb-3">
+    <span class="p-float-label  mb-4">
       <p-password type="password"   formControlName="password" id="password" [toggleMask]="true"  [required]="true"/>
       <label htmlFor="password">Password</label>
     </span>
 
-    <span class="p-float-label  mb-3">
+    <span class="p-float-label  mb-4">
       <p-calendar formControlName="dob" id="dob" [showIcon]="true" format="dd/mm/yy"  [required]="true"></p-calendar>
       <label htmlFor="dob">Date of birth</label>
     </span>
 
-    <span class="mb-3">
+    <span class="mb-4">
       <p-dropdown formControlName="securityQuestion" [options]="securityQuestionList" optionLabel="name" [required]="true" id="securityQuestion" ></p-dropdown>
     </span>
 
 
-    <span class="p-float-label  mb-3">
+    <span class="p-float-label  mb-4">
       <input type="text"  pInputText  formControlName="securityAnswers" id="securityAnswers"  [required]="true"/>
       <label htmlFor="securityAnswers">security Answers</label>
     </span>
 
-    <span class="mb-3">
+    <span class="mb-4">
       <p-button label="Submit" (onClick)="submitDemoForm()"></p-button>
     </span>
 
-    <span class="mb-3">
+    <span class="mb-4">
       <p *ngIf="isError" class="text-danger fs-6"> Please fill all the field.</p>
     </span>
+
   </form>
 
 </div>

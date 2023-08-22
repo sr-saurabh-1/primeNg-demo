@@ -159,5 +159,106 @@
 
 <div class="card">
   <p-blockUI [blocked]="blockedDocument"></p-blockUI>
-  <button type="button" pButton pRipple label="Block" (click)="blockDocument()"></button>
+  <button type="button" pButton pRipple label="Block document" (click)="blockDocument()"></button>
+</div>
+
+
+<div *ngFor="let category of categories" class="field-checkbox">
+  <p-checkbox name="group" [value]="category" [inputId]="category.key"></p-checkbox>
+  <label [for]="category.key">{{ category.name }}</label>
+</div>
+<!-- [(ngModel)]="selectedCategories" -->
+
+
+
+<br>
+<br>
+<br>
+<br>
+<!--
+  <div *ngFor="let category of categories" class="field-checkbox">
+      <p-radioButton [inputId]="category.key" [value]="category"></p-radioButton>
+      <label [for]="category.key" class="ml-2">{{ category.name }}</label>
+  </div> -->
+
+  <!-- <div class="flex flex-wrap gap-3">
+    <div class="flex align-items-center">
+        <p-radioButton name="pizza" value="Cheese" inputId="ingredient1"></p-radioButton>
+        <label for="ingredient1" class="ml-2">Cheese</label>
+    </div>
+
+    <div class="flex align-items-center">
+        <p-radioButton name="pizza" value="Mushroom" inputId="ingredient2"></p-radioButton>
+        <label for="ingredient2" class="ml-2">Mushroom</label>
+    </div>
+
+    <div class="flex align-items-center">
+        <p-radioButton name="pizza" value="Pepper" inputId="ingredient3"></p-radioButton>
+        <label for="ingredient3" class="ml-2">Pepper</label>
+    </div>
+
+    <div class="flex align-items-center">
+        <p-radioButton name="pizza" value="Onion" inputId="ingredient4"></p-radioButton>
+        <label for="ingredient4" class="ml-2">Onion</label>
+    </div>
+  </div> -->
+  <!-- <p-radioButton name="food" value="biryani" inputId="biryani"></p-radioButton>
+  <label for="biryani"></label>
+  <p-radioButton name="food" value="shawarma" inputId="shawarma"></p-radioButton>
+  <label for="shawarma"></label>
+  <p-radioButton name="food" value="chat" inputId="chat"></p-radioButton>
+  <label for="chat"></label> -->
+<div class="d-flex flex-column align-items-center justify-content-center">
+
+  <form [formGroup]="demoForm" class="d-flex flex-column align-items-center justify-content-center gap-2 border-2 demo-form ">
+    <p class="text-center fs-2 fw-bold " >Demo Form</p>
+    <span class="p-float-label mb-3">
+      <input type="text"  pInputText id="fName" formControlName="fName"  [required]="true"/>
+      <label htmlFor="fName">First name</label>
+    </span>
+    <span class="p-float-label  mb-3">
+      <input type="text"  pInputText  formControlName="lName" id="lName"  [required]="true"/>
+      <label htmlFor="lName">Last name</label>
+    </span>
+
+    <span class="p-float-label  mb-3">
+      <input type="email"  pInputText  formControlName="email" id="email"  [required]="true"/>
+      <label htmlFor="email">Email</label>
+    </span>
+
+    <span class="p-float-label  mb-3">
+      <p-inputMask mask="+99 9999999999"  formControlName="phone" id="phone" [required]="true"></p-inputMask>
+      <label htmlFor="phone">Phone No</label>
+    </span>
+
+
+    <span class="p-float-label  mb-3">
+      <p-password type="password"   formControlName="password" id="password" [toggleMask]="true"  [required]="true"/>
+      <label htmlFor="password">Password</label>
+    </span>
+
+    <span class="p-float-label  mb-3">
+      <p-calendar formControlName="dob" id="dob" [showIcon]="true" format="dd/mm/yy"  [required]="true"></p-calendar>
+      <label htmlFor="dob">Date of birth</label>
+    </span>
+
+    <span class="mb-3">
+      <p-dropdown formControlName="securityQuestion" [options]="securityQuestionList" optionLabel="name" [required]="true" id="securityQuestion" ></p-dropdown>
+    </span>
+
+
+    <span class="p-float-label  mb-3">
+      <input type="text"  pInputText  formControlName="securityAnswers" id="securityAnswers"  [required]="true"/>
+      <label htmlFor="securityAnswers">security Answers</label>
+    </span>
+
+    <span class="mb-3">
+      <p-button label="Submit" (onClick)="submitDemoForm()"></p-button>
+    </span>
+
+    <span class="mb-3">
+      <p *ngIf="isError" class="text-danger fs-6"> Please fill all the field.</p>
+    </span>
+  </form>
+
 </div>

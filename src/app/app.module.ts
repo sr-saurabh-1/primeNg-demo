@@ -40,6 +40,8 @@ import { InputMaskModule } from 'primeng/inputmask';
 import { InputSwitchModule } from 'primeng/inputswitch';
 import { PasswordModule } from 'primeng/password';
 import { BlockUIModule } from 'primeng/blockui';
+import { DropdownModule } from 'primeng/dropdown';
+
 
 
 @NgModule({
@@ -86,7 +88,8 @@ import { BlockUIModule } from 'primeng/blockui';
     InputMaskModule,
     InputSwitchModule,
     PasswordModule,
-    BlockUIModule
+    BlockUIModule,
+    DropdownModule
 
   ],
   providers: [MessageService],

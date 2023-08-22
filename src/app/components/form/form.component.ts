@@ -13,6 +13,8 @@ export class FormComponent {
   dateRange:Date[]=[];
   formGroup!: FormGroup;
   formGroup1!: FormGroup;
+  demoForm!: FormGroup;
+
 
   minDate!: Date;
 
@@ -21,7 +23,12 @@ export class FormComponent {
   value1!:string;
   value2!:string;
   value3!:string;
-blockedDocument: boolean = false;
+  categories!:{key:string,name:string}[];
+  blockedDocument: boolean = false;
+  selectedCategories:any;
+  securityQuestionList!:{name:string}[];
+
+  isError:boolean=false;
 
 
   constructor() {}
@@ -45,6 +52,32 @@ blockedDocument: boolean = false;
     this.maxDate = new Date();
     this.maxDate.setMonth(nextMonth);
     this.maxDate.setFullYear(nextYear);
+
+
+    this.categories=[{name:'Mumbai',key:'mumbai'}, {name:'Hyderabad',key:'hyd'}, {name:'Kolkata',key:'kol'},{name:'Patna',key:'patna'}];
+
+
+    this.securityQuestionList=[
+      {name:'What is the name of your first pet'},
+      {name:'What is the name of your best friend'},
+      {name:'What is the name of your favourite food'},
+      {name:'What is the name of your favourite sports'},
+      {name:'What is the name of your favourite sports player'},
+    ]
+
+
+    this.demoForm=new FormGroup({
+      fName:new FormControl<string>(''),
+      lName:new FormControl<string>(''),
+      email:new FormControl<string>(''),
+      phone:new FormControl<string|null>(null),
+      password:new FormControl<string>(''),
+      dob:new FormControl<string>(''),
+      securityQuestion:new FormControl<string>(''),
+      securityAnswers:new FormControl<string>(''),
+
+
+    })
   }
 
 
@@ -53,6 +86,17 @@ blockedDocument: boolean = false;
     console.log(this.formGroup.controls['date'].value);
     console.log(this.dates);
     console.log(this.dateRange);
+  }
+
+
+  submitDemoForm(){
+    if(this.demoForm.invalid){
+      this.isError=true;
+    }
+    else{
+      this.isError=false;
+    }
+    console.log(this.demoForm.value);
   }
 
 

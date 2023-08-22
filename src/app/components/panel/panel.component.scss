@@ -1,0 +1,16 @@
+.card-style{
+  display: block;
+  width: 10rem;
+}
+::ng-deep{
+  .p-card{
+    margin-left: 5rem;
+    width: 20rem !important;
+  }
+  .p-fieldset{
+    margin-left: 5rem;
+    width: 25rem;
+  }
+
+
+}

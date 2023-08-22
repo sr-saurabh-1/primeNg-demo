@@ -1,0 +1,238 @@
+
+<h1>ACCORDION</h1>
+<p-accordion [activeIndex]="1">
+  <ng-template pTemplate="header">
+    <p>accordion-1</p>
+  </ng-template>
+  <p-accordionTab header="Header-1">
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
+      voluptatibus commodi, tempora omnis, est dolor quae illum labore tempore,
+      similique blanditiis ullam. Nostrum nam reprehenderit doloribus fugiat
+      adipisci consectetur enim!
+    </p>
+  </p-accordionTab>
+  <p-accordionTab header="Header-2">
+    <p>Hi, This is Saurabh.</p>
+  </p-accordionTab>
+
+  <p-accordionTab header="Header-3">
+    <p>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio
+      aliquid amet dolores eligendi inventore, tempora illum totam et sint
+      consequuntur reiciendis eveniet. Itaque magni, laboriosam corrupti quasi
+      repudiandae rerum blanditiis!
+    </p>
+  </p-accordionTab>
+</p-accordion>
+
+<p-divider [type]="'dashed'"></p-divider>
+<p-divider [type]="'dashed'"></p-divider>
+
+<p-accordion [multiple]="true">
+  <p-accordionTab header="Header-1">
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
+      voluptatibus commodi, tempora omnis, est dolor quae illum labore tempore,
+      similique blanditiis ullam. Nostrum nam reprehenderit doloribus fugiat
+      adipisci consectetur enim!
+    </p>
+  </p-accordionTab>
+  <p-accordionTab header="Header-2">
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit quo
+      tenetur dignissimos quos corrupti nulla. Unde harum, consequuntur
+      voluptatum ullam itaque minus ratione. Suscipit et magni iste vero optio
+      sint!
+    </p>
+  </p-accordionTab>
+
+  <p-accordionTab header="Header-3">
+    <p>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio
+      aliquid amet dolores eligendi inventore, tempora illum totam et sint
+      consequuntur reiciendis eveniet. Itaque magni, laboriosam corrupti quasi
+      repudiandae rerum blanditiis!
+    </p>
+  </p-accordionTab>
+</p-accordion>
+
+<p-divider [type]="'dashed'"></p-divider>
+<p-divider [type]="'dashed'"></p-divider>
+
+
+<h1>CARD</h1>
+
+<p-card header=" Employee Card" [styleClass]="'card-style'">
+  <ng-template pTemplate="header">
+    <img
+      alt="Card"
+      src="https://primefaces.org/cdn/primeng/images/usercard.png"
+    />
+  </ng-template>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum laborum,
+    officia inventore qui, ut aliquam, quidem fuga odit quisquam nihil rem
+    doloribus ab facilis blanditiis. Corrupti molestias nesciunt est dolorum.
+  </p>
+  <ng-template pTemplate="footer">
+    <!-- <img alt="Card" src="https://primefaces.org/cdn/primeng/images/usercard.png" /> -->
+
+    <p-button pRipple label="cancle" class="p-button-success"></p-button>
+  </ng-template>
+</p-card>
+
+<p-divider [type]="'dashed'"></p-divider>
+<p-divider [type]="'dashed'"></p-divider>
+
+<h1>FIELDSET</h1>
+
+<p-fieldset legend="Field Header">
+  <p class="m-0">
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi aliquam,
+    dolorum architecto neque labore, suscipit reprehenderit, aperiam similique
+    accusantium eligendi molestiae? Suscipit vitae voluptatibus cumque ut
+    molestias, a aut nemo.
+  </p>
+</p-fieldset>
+
+<br />
+<br />
+<p-fieldset legend="Header">
+  <p class="m-0">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  </p>
+</p-fieldset>
+<br />
+<br />
+<p-fieldset [toggleable]="true" [collapsed]="true">
+  <ng-template pTemplate="header">
+    <div class="flex align-items-center text-primary">
+      <span class="pi pi-user mr-2"></span>
+      <span class="font-bold text-lg">User Details</span>
+    </div>
+  </ng-template>
+  <p class="m-0">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  </p>
+</p-fieldset>
+
+<p-divider [type]="'dashed'"></p-divider>
+<p-divider [type]="'dashed'"></p-divider>
+
+<h1>PANEL</h1>
+
+<p-panel header="Panel"  [style]="{width:'20rem', 'margin-left':'10rem'}">
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur eum
+    dicta nihil placeat minima qui. Fugiat ullam voluptate quam dolorem, impedit
+    amet maiores deleniti cum quae quis, molestiae libero alias.
+  </p>
+</p-panel>
+
+<br>
+<br>
+<p-panel [toggleable]="true" [style]="{width:'20rem', 'margin-left':'10rem'}">
+  <ng-template pTemplate="headericons">
+    <span class="pi pi-user mr-2"></span>
+  </ng-template>
+  <ng-template pTemplate="header">
+    Panel Title
+  </ng-template>
+  <ng-template pTemplate="content">
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur eum
+      dicta nihil placeat minima qui. Fugiat ullam voluptate quam dolorem, impedit
+      amet maiores deleniti cum quae quis, molestiae libero alias.
+    </p>
+  </ng-template>
+  <ng-template pTemplate="footer">
+    Panel Title
+  </ng-template>
+</p-panel>
+
+<p-divider [type]="'dashed'"></p-divider>
+<p-divider [type]="'dashed'"></p-divider>
+
+<h1>SPLITTER</h1>
+
+<p-splitter [panelSizes]="[20,80]" [minSizes]="[10, 0]" [style]="{ height: '400px' }">
+    <ng-template pTemplate>
+      <div class="d-flex align-items-center justify-content-center">Panel 1</div>
+    </ng-template>
+
+    <ng-template pTemplate>
+      <p-splitter layout="vertical" [panelSizes]="[15,85]">
+        <ng-template pTemplate>
+          <div class="d-flex align-items-center justify-content-center">Panel 2</div>
+        </ng-template>
+
+        <ng-template pTemplate>
+          <p-splitter [panelSizes]="[25,75]">
+            <ng-template pTemplate><div class="d-flex align-items-center justify-content-center">Panel 3</div></ng-template>
+            <ng-template pTemplate><div class="d-flex align-items-center justify-content-center">Panel 4</div></ng-template>
+
+          </p-splitter>
+        </ng-template>
+
+      </p-splitter>
+    </ng-template>
+</p-splitter>
+
+<p-divider [type]="'dashed'"></p-divider>
+<p-divider [type]="'dashed'"></p-divider>
+
+
+
+<div class="card">
+  <div class="d-flex  md:flex-row gap-5">
+      <div class="flex-auto">
+          <p-scrollPanel [style]="{ width: '100%', height: '200px' }" styleClass="custombar1">
+              <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+                  laborum.
+              </p>
+              <p>
+                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo
+                  enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Consectetur, adipisci velit, sed quia non numquam eius modi.
+              </p>
+              <p>
+                  At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in
+                  culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus.
+              </p>
+          </p-scrollPanel>
+      </div>
+      <div class="flex-auto">
+          <p-scrollPanel [style]="{ width: '100%', height: '200px' }" styleClass="custombar2">
+              <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+                  laborum.
+              </p>
+              <p>
+                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo
+                  enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Consectetur, adipisci velit, sed quia non numquam eius modi.
+              </p>
+              <p>
+                  At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in
+                  culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus.
+              </p>
+          </p-scrollPanel>
+      </div>
+  </div>
+</div>
+
+<p-divider [type]="'dashed'"></p-divider>
+<p-divider [type]="'dashed'"></p-divider>
+

@@ -1,0 +1,34 @@
+<h1>CAROUSEL</h1>
+
+<p-carousel [value]="products" [numScroll]="2" [numVisible]="4" [responsiveOptions]="responsiveOptions" [circular]="true" [class]="{overflow:'hidden'}">
+  <ng-template let-product pTemplate="item">
+    <div class=" d-flex flex-column align-items-center justify-content-center border rounded p-5 me-5 mb-5">
+      <div>
+        <p-image src="https://primefaces.org/cdn/primeng/images/demo/product/{{ product.image }}" [preview]="true" width="250" ></p-image>
+      </div>
+      <div class=" d-flex flex-column align-items-center justify-content-center  rounded ">
+        <h2>{{product.name}}</h2>
+        <h2>${{product.price}}</h2>
+        <p-tag [value]="product.inventoryStatus" [severity]="getSeverity(product.inventoryStatus)"></p-tag>
+      </div>
+    </div>
+  </ng-template>
+</p-carousel>
+<hr>
+
+<br>
+
+<p-carousel [value]="products" [numScroll]="1" [numVisible]="1" orientation="vertical">
+  <ng-template let-product pTemplate="item">
+    <div class=" d-flex flex-column align-items-center justify-content-center border rounded">
+      <div>
+        <p-image src="https://primefaces.org/cdn/primeng/images/demo/product/{{ product.image }}" [preview]="true"></p-image>
+      </div>
+      <div class=" d-flex flex-column align-items-center justify-content-center  rounded ">
+        <h2>{{product.name}}</h2>
+        <h2>${{product.price}}</h2>
+        <p-tag [value]="product.inventoryStatus" [severity]="getSeverity(product.inventoryStatus)"></p-tag>
+      </div>
+    </div>
+  </ng-template>
+</p-carousel>

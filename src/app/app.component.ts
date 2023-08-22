@@ -178,14 +178,14 @@ export class AppComponent {
 
     let tmp:Product={
       id: 'i',
-      code: 'string',
-      name: 'String',
+      code: 'prod',
+      name: 'Product',
       description: 'string',
       price: 100,
       quantity: 10,
-      inventoryStatus: 'string',
-      category: 'string',
-      image: 'string',
+      inventoryStatus: 'inStock',
+      category: 'category',
+      image: 'img',
       rating: 4.5,
     }
 
